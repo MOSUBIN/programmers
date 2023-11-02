@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp169
+{
+    internal class Program
+    {
+
+         // 더 크게 합치기 프로그래머스 
+        static void Main(string[] args)
+        {
+            int a = int.Parse(Console.ReadLine());    //int a값 입력받기
+            int b = int.Parse(Console.ReadLine());    //int b값 입력받기
+
+            string c = a.ToString();                  //int a값 문자열로 변환
+            string d = b.ToString();                  //int b값 문자열로 변환
+
+            if(int.Parse(c) > int.Parse(d))           //c와 d 비교하기 
+            {
+                Console.WriteLine(c.ToString() + d.ToString());
+            }
+            else
+            {
+                Console.WriteLine(d.ToString() + c.ToString());
+            }
+          
+        }
+    }
+}
