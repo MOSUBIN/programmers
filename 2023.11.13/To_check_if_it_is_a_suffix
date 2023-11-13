@@ -1,0 +1,27 @@
+using System;
+using System.Linq;
+
+namespace ConsoleApp171
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string my_String = Console.ReadLine();  // my_String 문자열 입력받기 
+            string is_suffix = Console.ReadLine();       // is_suffix 문자열 입력받기
+
+
+            if(my_String.EndsWith(is_suffix))      // EndsWith 인스턴스 끝부분이랑 특정 문자열이 같은지 비교         
+            {
+                Console.WriteLine(1);
+            }
+            else
+            {
+                Console.WriteLine(0);
+            }
+
+           
+        }
+    }
+}
