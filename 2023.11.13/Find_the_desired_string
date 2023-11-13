@@ -1,0 +1,28 @@
+using System;
+using System.Linq;
+
+namespace ConsoleApp171
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string myString = Console.ReadLine();  // myString 문자열 입력받기 
+            string pat = Console.ReadLine();       // pat 문자열 입력받기
+
+
+            myString = myString.ToLower();          // 두 문자열 비교를 위해 문자열 소문자로 변환 
+            pat = pat.ToLower();
+
+            if (myString.Contains(pat))             // Contains(문자열) 문자열이 포함되어있는지 아닌지 확인
+            {
+                Console.WriteLine(1);
+            }
+            else
+            {
+                Console.WriteLine(0);
+            }
+        }
+    }
+}
