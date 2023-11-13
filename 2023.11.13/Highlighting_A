@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp171
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string myString = Console.ReadLine();       // myString 입력 받기
+
+            myString = myString.ToLower();
+
+            foreach (string s in myString.Split())
+            {
+
+                Console.WriteLine(s.Replace('a', 'A')); // Replace 문자열 요소 바꾸기
+            }
+
+
+        }
+    }
+}
