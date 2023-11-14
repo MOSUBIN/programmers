@@ -1,0 +1,18 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ConsoleApp171
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n_str = int.Parse(Console.ReadLine());   // 정수 n_str 입력받기 
+
+            Console.WriteLine(n_str.ToString().TrimStart('0')); //TrimSrart = 앞쪽에 원하는 문자열 제거 
+
+            
+        }
+    }
+}
