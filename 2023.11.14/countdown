@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+
+namespace ConsoleApp171
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int start_num = int.Parse(Console.ReadLine());  // Start_num 정수값 받기
+            int end_num = int.Parse(Console.ReadLine());    // end_num 정수값 받기
+
+            List<int> list = new List<int>();
+
+
+            for(int i = start_num; i >= end_num; i--)
+            {
+                list.Add(i);
+
+            }
+
+            foreach(int i in list)
+            {
+                Console.WriteLine(i);
+            }    
+         
+        }
+    }
+}
