@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+
+namespace ConsoleApp171
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string my_string = Console.ReadLine();
+            string alp = Console.ReadLine();
+
+            Console.WriteLine(my_string.Replace(alp, alp.ToUpper()));
+         
+        }
+    }
+}
