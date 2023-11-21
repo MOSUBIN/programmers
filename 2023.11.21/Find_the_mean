@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp174
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            List<double> arr = new List<double> { 1, 2, 3, 4 };
+            double answer = 0;
+            for(int i = 0; i < arr.Count; i++)
+            {
+                answer += arr[i];
+            }
+
+            Console.WriteLine(answer / arr.Count);
+           
+          
+        }
+    }
+}
