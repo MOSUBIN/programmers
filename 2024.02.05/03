@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace programmers_1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int[] numbers = { 1, 2, 3, 4, 5 };
+
+            int[] answers = new int[numbers.Length]; //배열 생성
+
+            for(int i=0; i< numbers.Length; i++)
+            {
+                answers[i] = numbers[i] * 2;
+            }
+
+            foreach(int answer in answers)
+            {
+                Console.Write(answer);
+            }
+            
+
+        }
+    }
+}
