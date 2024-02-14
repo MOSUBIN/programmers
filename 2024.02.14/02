@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // 예각 0도 ~ 90도
+            // 직각 90도
+            // 둔각 90도 ~ 180도
+            // 평각 180도
+
+            int angle = int.Parse(Console.ReadLine()); // 입력 받을 각도
+
+           if(0 < angle && angle < 90) //예각
+            {
+                Console.WriteLine(1);
+            }
+
+           else if(angle == 90) //직각
+            {
+                Console.WriteLine(2);
+            }
+
+           else if(90 < angle && angle < 180) //둔각
+            {
+                Console.WriteLine(3);
+            }
+
+           else if(angle == 180) //평각
+            {
+                Console.WriteLine(4);
+            }
+
+           else
+            {
+                Console.WriteLine("유효하지 않은 각도입니다."); // 유효하지 않은 각도
+            }
+
+        }
+    }
+}
