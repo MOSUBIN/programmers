@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //2022년 기준 나이 출력 
+
+            int age = int.Parse(Console.ReadLine());  // 입력할 나이 
+
+            int result = (2022 - age) + 1;  //태어난 연도에 1살이기에 +1
+
+            Console.WriteLine(result);
+        }
+    }
+}
