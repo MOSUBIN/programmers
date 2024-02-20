@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string my_string = Console.ReadLine(); //문자열 변수 
+            char[] answer = my_string.ToCharArray(); 
+            Array.Reverse(answer);
+            string answer1 = new string(answer);
+            Console.WriteLine(answer1);
+         
+        }
+    }
+}
