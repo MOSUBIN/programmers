@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] num_list = {1,2,3,4,5 };
+
+            //첫번째 방법 
+            //Array.Reverse(num_list);
+
+            //foreach (int num in num_list)
+            //{
+            //    Console.Write(num);
+            //}
+            
+            //2번째 방법
+            int[] array = Enumerable.Reverse(num_list).ToArray();
+            foreach (int i in array)
+            {
+                Console.WriteLine(i);
+            }
+           
+        }
+    }
+}
