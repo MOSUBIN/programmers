@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // 최댓값 만들기
+
+            int[] numbers = { 0, 31, 24, 10, 1, 9};
+            int answer = int.MinValue; //0으로 초기화도 가능한데 음수일 경우 문제가 발생함으로 int.MinValue로 초기화
+                                       //최댓값 비교를 위한 과정 
+
+            for(int i = 0; i < numbers.Length; i++)  
+            {
+                for (int j = i + 1; j < numbers.Length; j++)
+                {
+                    int num = numbers[i] * numbers[j]; // 배열 안의 수를 곱한 값 변수 
+
+                    if(num > answer)  // 만약 곱한값이 현재의 최댓값보다 크다면 
+                    {
+                        answer = num;  // 최댓값 갱신 
+                    }
+                }
+            }
+            Console.WriteLine(answer);
+
+        }
+    }
+}
