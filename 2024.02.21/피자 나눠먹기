@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // 피자 나눠 먹기 
+
+            int slice = int.Parse(Console.ReadLine()); //피자 조각 수 
+            int n = int.Parse(Console.ReadLine()); // 피자를 먹는 사람의 수 
+            int answer = 0; //피자 수 
+
+            if(n % slice == 0)   // 먹는 수와 조각 수 나눴을 때 0이 나오면 피자 수는 몫 값
+            {
+                answer = (n / slice);
+            }
+
+            else
+            {
+                answer = (n / slice) + 1; //먹는 수와 조각 수를 나눴을 때 나머지가 나오면 몫 값에서 + 1 해주기
+            }
+
+            Console.WriteLine(answer);
+
+         
+        }
+    }
+}
