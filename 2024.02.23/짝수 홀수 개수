@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+
+public class Solution {
+    public int[] solution(int[] num_list) {
+        
+        int num1 = 0;
+        int num2 = 0;
+        
+        foreach (int i in num_list)
+        {
+            if(i % 2 == 0) // 짝수
+            {
+                num1++;
+            }
+            else  // 홀수 
+            {
+                num2++;
+            }
+        };
+        
+        List<int> answer = new List<int>();  // 새로운 리스트 
+        answer.Add(num1);
+        answer.Add(num2);
+        
+        return answer.ToArray();   // 배열 읽기 
+            
+        
+    }
+}
