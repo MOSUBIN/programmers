@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // 편지 
+
+            string message = Console.ReadLine();  // 생신 축하 편지 글 
+            int answer = 0; // 편지지의 최소 가로 길이 
+
+            // 한글자를 2cm로 생각 
+            answer = message.Length * 2;
+
+            Console.WriteLine(answer);
+
+        }
+    }
+}
