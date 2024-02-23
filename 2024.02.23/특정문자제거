@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string my_string = Console.ReadLine();  // 문자열 매개변수
+            string letter = Console.ReadLine();  // 문자 매개변수 
+
+            Console.WriteLine(my_string.Replace(letter,""));
+
+            //Replce 문자열에서 특정 문자를 다른 문자로 대체하여 제거.
+        }
+    }
+}
