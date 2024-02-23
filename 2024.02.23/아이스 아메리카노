@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // 아이스 아메리카노 
+
+            int ice = 0;  // 사 먹은 아이스아메리카노 수 
+            int money = int.Parse(Console.ReadLine()) ; // 머쓱이가 가지고 있는 돈 
+            int money_1 = 0; // 머쓱이가 쓰고 남은 돈 
+
+            if(money % 5500 == 0)  // 최대로 마실 수 있는 아메리카노 계산 
+            {
+                ice++;
+            }
+            else   // 만약 잔돈이 남는다면 
+            {
+                ice = money / 5500;
+                money_1 = money - (5500 * (ice));
+            }
+
+            List<int> answer = new List<int>(); // 배열 담을 리스트 생성
+            answer.Add(ice);
+            answer.Add(money_1);
+
+            foreach(int i in answer)
+            {
+                Console.WriteLine(i);
+            }    
+
+        }
+    }
+}
