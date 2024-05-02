@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // 머쓱이네 피자는 일곱조각으로 잘라준다.
+
+            int n = int.Parse(Console.ReadLine()); // 피자를 나눠먹을 사람의 수 
+            int answer;  // 피자의 수  
+
+            if ( n / 7 >=  0 )       // 사람의 수를 피자 조각 수로 나눴을 때
+            {
+
+                if( n % 7 == 0)      // 7의 배수인 사람의 수일 경우 
+                {
+                    answer = n / 7;    // 7을 나눈 몫 값 
+                }
+
+                else
+                {
+                    answer = (n / 7) + 1;    // 사람의 수가 7의 배수는 아닐때
+                }
+               
+            }
+
+
+            else
+            {
+                answer = 0; // n < 0 일 경우 
+            }
+
+            Console.WriteLine(answer);
+            
+            
+
+        }
+    }
+}
