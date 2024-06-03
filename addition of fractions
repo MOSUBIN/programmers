@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int numer1 = int.Parse(Console.ReadLine());// 첫번째 분수의 분자
+            int denom1 = int.Parse(Console.ReadLine()); ; // 첫번째 분수의 분모
+
+            int numer2 = int.Parse(Console.ReadLine()); ; // 두 번째 분수의 분자
+            int denom2 = int.Parse(Console.ReadLine()); ; // 두 번째 분수의 분모
+
+
+            int numer3 = 0;  // numer1 + numer2의 분자값
+            int denom3 = 0;  // numer1 + numer2의 분모값
+
+            if (denom2 % denom1 == 0)   // 만약 두 분모를 나눴을 때 나머지가 0일때
+            {   
+                numer3 = (numer1 * (denom2 / denom1)) + numer2;
+                denom3 = denom2;
+            }
+
+            else 
+            {
+                numer3 = (numer1 * denom2) + (numer2 * denom1);
+                denom3 = denom2 * denom1;
+
+            }
+
+            int gcd = GCD(numer3, denom3); // 최대공약수 함수
+
+            numer3 /= gcd;  // 분자값에 최대공약수 나누기 numer3 / gcd = numer3
+            denom3 /= gcd;  // 분모값에 최대공약수 나누기 denom3 / gcd = denom3
+
+            int[] answer = { numer3, denom3 }; // 배열 집어넣기
+
+            foreach (int i in answer)
+            {
+                Console.WriteLine(i);
+            }
+            
+        }
+
+        static int GCD (int a , int b)  // 최대공약수 함수 
+        {
+
+            // a가 b보다 크거나 같다고 가정 
+
+            while (b != 0)  // b가 0이 아닐 때까지 반복으로 나눔 
+            {
+                int temp = b;    // b 값을 temp에 저장
+                b = a % b;    // b는 a와 b를 나눈 나머지를 저장
+                a = temp;    // a에는 b값을 저장.
+            }
+
+            return a;  // b가 0이 될 경우 a가 최대공약수가 된다. 
+        }
+    }
+}
