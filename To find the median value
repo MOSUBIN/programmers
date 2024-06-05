@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //중앙값 구하기
+            //크기를 순서대로 정렬했을 때 가장 중앙에 위치하는 값
+
+            //array의 길이는 홀수
+
+            int[] array = new int[] { 9,-1,0 };
+            Array.Sort(array);  // 배열 정렬
+
+            int result = array[array.Length / 2];
+
+            Console.WriteLine(result);
+        }
+    }
+}
