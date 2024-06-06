@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // 문자 반복 출력하기 
+
+            string my_string = Console.ReadLine(); // 문자열 my_string 입력받기
+            string answer = " ";   // 결과를 저장할 문자열 
+            int n = int.Parse(Console.ReadLine()); // 정수 n 반복시킬 숫자
+
+            for(int i = 0; i < my_string.Length; i++)   
+            {
+                for(int j = 0; j < n; j++)
+                {
+                    answer += my_string[i];
+            
+                }
+                
+            }
+            Console.WriteLine(answer);
+
+        }
+    }
+}
