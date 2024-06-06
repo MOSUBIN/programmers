@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // 양꼬치
+
+            // 머쓱이네 양꼬치 가게는 10인분을 먹으면 음료수 하나 서비스
+            // 양꼬치 1인분 12000원
+            // 음료수 2000원
+
+            int n = int.Parse(Console.ReadLine()); // 양꼬치 정수 n 인분 
+            int k = int.Parse(Console.ReadLine()); // 음료수 정수 k 개
+
+            int answer = 0; // 양꼬치 + 음료수 총 가격
+
+            if( n >= 10)  // 양꼬치를 10인분 이상 시켰을 경우 
+            {
+                // n을 10으로 나눈 몫만큼 음료수 공짜 
+                answer = (n * 12000) + ((k - (n / 10)) * 2000);
+            }
+
+            else   // 양꼬치 10인분 미만으로 시켰을 경우 
+            {
+                answer = (n * 12000) + (k * 2000);
+            }
+
+            Console.WriteLine(answer);
+        }
+    }
+}
