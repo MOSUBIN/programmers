@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //  직각 삼각형 출력하기
+
+            // '*'의 높이와 너비를 1이라고 했을 경우
+
+            // 정수 n 입력받기
+            int n = int.Parse(Console.ReadLine());
+
+            for(int i = 1; i <= n; i++)  // 출력할 줄의 수 
+            {
+                for(int j = 0; j < i; j++)
+                {
+                    Console.Write('*');
+                }
+
+                Console.WriteLine(' ');
+            }
+        }
+    }
+}
