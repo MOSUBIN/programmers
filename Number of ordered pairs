@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // 순서쌍의 개수 
+
+            int n = int.Parse(Console.ReadLine());  // 입력 받을 자연수
+            int answer = 0; // 순서쌍의 개수 
+            
+            for(int i = 1; i <= n; i++) // 나눠야 하기에 1부터 시작 입력받은 숫자까지 반복
+            {
+                if(n % i == 0)   // 만약 입력받은 수랑 i랑 나누어 떨어질 경우 
+                {
+                    answer++; // answer 개수 늘리기 
+                }
+            }
+
+            Console.WriteLine(answer);
+        }
+    }
+}
