@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // 외계 행성의 나이 
+
+            // 우주 여행을 갔는데 엔진 고장으로 PROGRAMMERS-962 행성에 불시착
+            // 입국 심사에는 나이가 필요
+            // PROGRAMMERS-962 행성에는 나이를 알파벳으로 나타냄.
+
+            int age = int.Parse(Console.ReadLine()); // 나이 입력 받기 
+            string answer = ""; // 알파벳으로 출력한 나이 
+            
+            foreach( char string_age in age.ToString())
+            {
+                switch (string_age)
+                {
+                    case '0':
+                        answer += "a";
+                        break;
+                    case '1':
+                        answer += "b";
+                        break;
+                    case '2':
+                        answer += "c";
+                        break;
+                    case '3':
+                        answer += "d";
+                        break;
+                    case '4':
+                        answer += "e";
+                        break;
+                    case '5':
+                        answer += "f";
+                        break;
+                    case '6':
+                        answer += "g";
+                        break;
+                    case '7':
+                        answer += "h";
+                        break;
+                    case '8':
+                        answer += "i";
+                        break;
+                    case '9':
+                        answer += "j";
+                        break;
+
+                }
+            }
+
+            Console.WriteLine(answer);
+
+        }
+    }
+}
