@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // 개미 군단
+
+            // 장군 개미는 5의 공격력
+            // 병장 개미는 3의 공격력
+            // 일개미는 1의 공격력 
+
+            // 사냥감의 체력 
+            int hp = int.Parse(Console.ReadLine());
+
+            int answer = 0; // 총 개미의 수 
+
+            int a_ant = 5; // 장군 개미의 공격력
+            int b_ant = 3; // 병장 개미의 공격력
+            int c_ant = 1; // 일 개미의 공격력
+
+            if(hp % a_ant == 0)  // 만약 장군 개미와 사낭걈의 체력수가 나누어 떨어질 경우 
+            {
+                a_ant = (hp / a_ant);
+                answer = a_ant;
+
+            }
+
+            else // 장군 개미와 사냥감의 체력수가 나누어 떨어지지 않을 경우 
+            {
+                a_ant = (hp / a_ant);  // 장군 개미의 수
+                hp = hp - ((a_ant) * 5);  // 장군 개미의 공격력을 쓰고 남은 hp
+
+                if(hp % b_ant == 0)   // 장군 개미와 싸운 후 남은 체력수와 병장개미와 나누어 떨어질 경우 
+                {
+                    b_ant = (hp / b_ant);
+                    answer = a_ant + b_ant;
+                }
+
+                else // 나누어 떨어지지 않을 경우 
+                {
+                    b_ant = (hp / b_ant);
+                    hp = hp - (b_ant * 3);
+                    answer = a_ant + b_ant + (hp / c_ant);
+                }
+                
+            }
+            Console.WriteLine(answer);
+        }
+    }
+}
