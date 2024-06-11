@@ -1,0 +1,27 @@
+using System;
+
+public class Solution {
+    public string solution(string rsp) {
+        string answer = "";  //rsp에 저장된 가위바위보를 모두 이기는 경우를 나타낸 문자열 
+        
+        foreach (char rsp_char in rsp)
+        {
+            switch (rsp_char)
+            {
+                case '2':
+                    answer += "0";
+                    break;
+                case '0':
+                    answer += "5";
+                    break;
+                case '5':
+                    answer += "2";
+                    break;
+                default:
+                    answer += "만족하는 수가 없습니다.";
+                    break;
+            }
+        }
+        return answer;
+    }
+}
