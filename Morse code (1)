@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // 모스부호(1)
+
+            // 머쓱이는 친구에게 모스부호를 이용한 편지를 받음
+            // 해독하는 프로그램 만들기
+
+            string letter = Console.ReadLine(); // 해독할 모스 부호 입력받을 문자열 letter
+            string answer = "";  // 모스부호를 영어 소문자로 바꾼 문자열 
+
+            // a ~ z에 해당하는 모스부호가 순서대로 담긴 배열 
+            string[] morse = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.." };
+
+            // 해독할 수 없는 편지는 주어지지 않음. 
+            string[] morse_alphabet = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+
+            // 모스부호는 공백으로 나눠져있음 
+            // 입력 받은 모스부호를 공백으로 나누어 배열로 만들기
+            string[] morse_letters = letter.Split(' ');
+
+            // foreach 배열이나 리스트 같은 여러 개의 아이템을 하나씩 꺼내서 사용
+            // for 정해진 횟수만큼 반복
+            
+            foreach(string morseletter in morse_letters)  
+            {
+                for(int i = 0; i < morse.Length; i++)
+                {
+                   if(morseletter == morse[i])  // 만약 morseletter이 morse[i]와 같다면
+                    {
+                        answer += morse_alphabet[i]; // morse_alphabet[i] 요소를 answer에 추가 
+                        break;
+                    }
+                }
+            }
+
+            Console.WriteLine(answer);
+
+        }
+
+   
+    }
+}
