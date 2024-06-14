@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp13
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {       
+
+            // 대문자와 소문자
+
+            // 대문자는 소문자, 소문자는 대문자로 ~
+
+            string my_string = Console.ReadLine();  // 매개변수로 주어진 문자열
+
+            string answer = "";  // 대문자는 소문자, 소문자는 대문자로 바뀐 문자열
+
+            foreach(char c in my_string)
+            {
+                if(char.IsUpper(c))   // 대문자인지 확인 
+                { 
+                    answer += char.ToLower(c);
+                }
+
+                else if(char.IsLower(c))    // 소문자인지 확인
+                {
+                    answer += char.ToUpper(c);
+                }
+            }
+
+            Console.WriteLine(answer);  
+        
+            }
+        }
+    }
+
