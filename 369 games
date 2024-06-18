@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp14
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // 369게임
+
+            int order = int.Parse(Console.ReadLine()); // 머쓱이가 말해야하는 숫자
+            int answer = 0;  // 머쓱이가 쳐야할 박수 횟수 
+
+            foreach (char i in order.ToString())  // int를 문자열로 바꾼 후 문자열을 문자로!
+            {
+                if (i % 3 == 0 && i != '0') // 3의 배수이면
+                {
+                    answer++; // 박수 횟수 증가
+                }
+
+            }
+            Console.WriteLine(answer);
+        }
+    }
+}
